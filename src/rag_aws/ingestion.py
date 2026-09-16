@@ -1,61 +1,108 @@
+import re
 from pathlib import Path
 
 import pymupdf4llm
 from langchain_core.documents import Document
 
 
-def ingest_pdf(pdf_path:str | Path, output_path:str | Path):
-    "extract a pdf page by page using pymupdf4llm"
+def clean_page_text(text: str) -> str:
+    """Remove recurring headers, footers, copyright notices, and standalone page numbers."""
+    # Remove copyright notices (both exact string and flexible regex match)
+    text = text.replace(
+        "Copyright © 2026 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.",
+        "",
+    )
+    text = re.sub(
+        r"Copyright\s+©\s+\d{4}\s+Amazon Web Services,\s*Inc\.\s+and/or\s+its\s+affiliates\.\s*All\s+rights\s+reserved\.?",
+        "",
+        text,
+        flags=re.IGNORECASE,
+    )
 
-    pdf_path=Path(pdf_path)
-    output_path=Path(output_path)
+    # Remove recurring headers and footers (line-level to preserve markdown headings like '## **Overview...**')
+    text = re.sub(r"^[ \t]*Overview of Amazon Web Services[ \t]*$\n?", "", text, flags=re.MULTILINE)
+    text = re.sub(r"^[ \t]*AWS Whitepaper[ \t]*$\n?", "", text, flags=re.MULTILINE)
 
-    #validate input
+    # Remove standalone page numbers (lines consisting only of digits)
+    text = re.sub(r"^[ \t]*\d+[ \t]*$\n?", "", text, flags=re.MULTILINE)
+
+    # Collapse excessive blank lines
+    text = re.sub(r"\n{3,}", "\n\n", text).strip()
+
+    return text
+
+
+def ingest_pdf(
+    pdf_path: str | Path,
+    output_path: str | Path | None = None,
+    toc_end_page: int = 10,
+) -> Document:
+    """Extract and prepare PDF text for hierarchical chunking.
+
+    - Skips Table of Contents / front-matter pages (first 10 pages).
+    - Cleans recurring headers, footers, copyright notices, and page numbers.
+    - Injects hidden page markers: <!-- PAGE_{page_number} -->.
+    - Returns a single LangChain Document with metadata {"source": pdf_path.name}.
+    """
+    pdf_path = Path(pdf_path)
+
     if not pdf_path.exists():
-        raise FileNotFoundError(f"pdf not found : {pdf_path}")
+        raise FileNotFoundError(f"PDF not found: {pdf_path}")
 
-    if pdf_path.suffix.lower()!=".pdf":
-        raise ValueError(f"Expected a pdf file got {pdf_path.suffix}")
+    if pdf_path.suffix.lower() != ".pdf":
+        raise ValueError(f"Expected a PDF file, got {pdf_path.suffix}")
 
-    #create output directory
-    output_path.parent.mkdir(parents=True,exist_ok=True)
+    # Extract PDF page by page
+    pages = pymupdf4llm.to_markdown(str(pdf_path), page_chunks=True)
 
-    #extract pdf page by page
-    pages=pymupdf4llm.to_markdown(str(pdf_path),page_chunks=True)
+    combined_parts: list[str] = []
 
-    documents:list[Document]=[]
-    combined_parts:list[str]=[]
+    for page_number, page in enumerate(pages, start=1):
+        # Skip Table of Contents and front matter pages
+        if page_number <= toc_end_page:
+            continue
 
-    for page_number,page in enumerate(pages,start=1):
-        markdown=page["text"]
+        cleaned_text = clean_page_text(page.get("text", ""))
+        if not cleaned_text:
+            continue
 
-        #create langchain document
-        document=Document(page_content=markdown,metadata={"source":pdf_path.name,"page":page_number})
+        # Inject hidden HTML comment marker before appending page text
+        combined_parts.append(f"\n\n<!-- PAGE_{page_number} -->\n\n{cleaned_text}")
 
-        documents.append(document)
+    combined_markdown = "".join(combined_parts).strip()
 
-        #add page marker for combined file (debugging only, not read back by chunking)
-        combined_parts.append(f"<!-- page: {page_number} -->\n{markdown}")
+    # Optionally write combined markdown to file for inspection
+    if output_path:
+        output_path = Path(output_path)
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        output_path.write_text(combined_markdown, encoding="utf-8")
+        print(f"Combined markdown saved to: {output_path}")
 
-    #save one combined markdown file for manual inspection
-    output_path.write_text("\n\n".join(combined_parts),encoding="utf-8")
+    print(f"Processed {len(pages) - toc_end_page} content pages (skipped first {toc_end_page} TOC/cover pages).")
 
-    print(f"Processed {len(documents)} pages.")
-    print(f"Combined markdown saved to: {output_path}")
-
-    return documents
+    # Return a single LangChain Document
+    return Document(
+        page_content=combined_markdown,
+        metadata={"source": pdf_path.name},
+    )
 
 
 if __name__ == "__main__":
-    pdf_path = Path("data/raw/aws-overview.pdf")
+    # Support common filenames in data/raw
+    raw_dir = Path("data/raw")
+    candidates = [
+        raw_dir / "aws-overview (1).pdf",
+        raw_dir / "aws-overview(1).pdf",
+        raw_dir / "aws-overview.pdf",
+    ]
+    pdf_path = next((p for p in candidates if p.exists()), candidates[0])
     output_path = Path("data/processed/aws-overview.md")
 
-    documents = ingest_pdf(pdf_path, output_path)
+    document = ingest_pdf(pdf_path, output_path)
 
-    print("\nFirst page metadata:")
-    print(documents[0].metadata)
+    print("\nDocument metadata:")
+    print(document.metadata)
 
-    print("\nFirst page content:")
-    print(documents[0].page_content[:1000])
-
-    
+    print(f"\nTotal characters: {len(document.page_content)}")
+    print("\nFirst 1000 characters of combined content:")
+    print(document.page_content[:1000])

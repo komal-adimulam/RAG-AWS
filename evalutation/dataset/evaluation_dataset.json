@@ -1,0 +1,544 @@
+[
+  {
+    "type": "factoid",
+    "question": "What entity owns and maintains the network-connected hardware required for application services in a cloud services platform like AWS?",
+    "ground_truth_answer": "A cloud services platform such as Amazon Web Services (AWS) owns and maintains the network-connected hardware required for these application services.",
+    "expected_parent_ids": [
+      "6dd14666-d4f8-46c6-b3f4-961a47763ae9"
+    ],
+    "expected_page_numbers": [
+      13
+    ]
+  },
+  {
+    "type": "complex",
+    "question": "How do the 'Trade fixed expense for variable expense' and 'Benefit from massive economies of scale' advantages work together to optimize costs in cloud computing?",
+    "ground_truth_answer": "Instead of investing heavily in data centers and servers upfront without knowing your usage, you can pay only for the computing resources you consume and only for how much you use (trading fixed expense for variable expense). Additionally, by aggregating usage from hundreds of thousands of customers, providers like AWS achieve massive economies of scale, which directly translates into lower pay-as-you-go prices that allow you to achieve a lower variable cost than you could get on your own.",
+    "expected_parent_ids": [
+      "6dd14666-d4f8-46c6-b3f4-961a47763ae9"
+    ],
+    "expected_page_numbers": [
+      13
+    ]
+  },
+  {
+    "type": "factoid",
+    "question": "What operational benefit does cloud computing provide regarding data centers according to the text?",
+    "ground_truth_answer": "Cloud computing allows businesses to stop spending money running and maintaining data centers, letting them focus on projects that differentiate their business and on their own customers rather than the heavy lifting of racking, stacking, and powering servers.",
+    "expected_parent_ids": [
+      "4c8143ee-f19c-489b-b076-6b695855ebab"
+    ],
+    "expected_page_numbers": [
+      14
+    ]
+  },
+  {
+    "type": "complex",
+    "question": "How do different models and deployment strategies of cloud computing assist developers and IT departments in managing their workloads?",
+    "ground_truth_answer": "Different models and deployment strategies of cloud computing help meet the specific needs of different users by avoiding undifferentiated work such as procurement, maintenance, and capacity planning, while providing developers and IT departments with different levels of control, flexibility, and management.",
+    "expected_parent_ids": [
+      "4c8143ee-f19c-489b-b076-6b695855ebab"
+    ],
+    "expected_page_numbers": [
+      14
+    ]
+  },
+  {
+    "type": "factoid",
+    "question": "What is the most common method of hybrid deployment mentioned in the text?",
+    "ground_truth_answer": "The most common method of hybrid deployment is between the cloud and existing on-premises infrastructure to extend, and grow, an organization's infrastructure into the cloud while connecting cloud resources to the internal system.",
+    "expected_parent_ids": [
+      "79f53b97-d09c-45ab-a37d-3dd9b91cba59"
+    ],
+    "expected_page_numbers": [
+      15
+    ]
+  },
+  {
+    "type": "complex",
+    "question": "How are AWS Regions and Availability Zones structured to support highly available, fault-tolerant, and scalable production applications?",
+    "ground_truth_answer": "An AWS Region is a physical location in the world containing multiple Availability Zones. Each Availability Zone consists of one or more discrete data centers housed in separate facilities, complete with redundant power, networking, and connectivity. This structure allows users to operate production applications and databases that are more highly available, fault tolerant, and scalable than operating from a single data center.",
+    "expected_parent_ids": [
+      "79f53b97-d09c-45ab-a37d-3dd9b91cba59"
+    ],
+    "expected_page_numbers": [
+      15
+    ]
+  },
+  {
+    "type": "factoid",
+    "question": "What type of tools do AWS customers use to monitor and protect the flow of information in the cloud instead of managing physical hardware?",
+    "ground_truth_answer": "Software-based security tools",
+    "expected_parent_ids": [
+      "2daede20-3563-40fd-a99f-3cb74f69f4c2"
+    ],
+    "expected_page_numbers": [
+      16
+    ]
+  },
+  {
+    "type": "complex",
+    "question": "How does cloud security on AWS compare to managing an on-premises data center in terms of physical maintenance and security posture?",
+    "ground_truth_answer": "Security in the cloud is much like security in an on-premises data center, but without the costs of maintaining facilities and hardware. Customers do not have to manage physical servers or storage devices; instead, they use software-based security tools to monitor and protect the flow of information. Additionally, customers inherit all the best practices of AWS policies, architecture, and operational processes built for security-sensitive organizations, allowing them to maintain a secure environment at a lower cost.",
+    "expected_parent_ids": [
+      "2daede20-3563-40fd-a99f-3cb74f69f4c2"
+    ],
+    "expected_page_numbers": [
+      16
+    ]
+  },
+  {
+    "type": "factoid",
+    "question": "What are the three primary interfaces or methods provided to access AWS services?",
+    "ground_truth_answer": "To access the services, you can use the AWS Management Console, the AWS Command Line Interface (AWS CLI), or Software Development Kits (SDKs).",
+    "expected_parent_ids": [
+      "6ac0e4a3-3148-4108-aca7-4fe758a2aebb"
+    ],
+    "expected_page_numbers": [
+      18
+    ]
+  },
+  {
+    "type": "complex",
+    "question": "How does AWS support customers who need information on its IT control environment and compliance assurance programs?",
+    "ground_truth_answer": "AWS supports customers by providing a wide range of information on its IT control environment through whitepapers (such as the Risk and Compliance whitepaper), reports, certifications, accreditations, and other third-party attestations, as well as the AWS Security Center. Additionally, AWS complies with and lists various assurance programs, including SOC 1/ISAE 3402, SOC 2, SOC 3, FISMA, DIACAP, FedRAMP, PCI DSS Level 1, and ISO standards (9001, 27001, 27017, 27018).",
+    "expected_parent_ids": [
+      "6ac0e4a3-3148-4108-aca7-4fe758a2aebb"
+    ],
+    "expected_page_numbers": [
+      18
+    ]
+  },
+  {
+    "type": "factoid",
+    "question": "What tool can be used at no charge in the AWS Management Console to review workloads against AWS Well-Architected best practices?",
+    "ground_truth_answer": "You can use the AWS Well-Architected Tool, available at no charge in the AWS Management Console, to review your workloads against the best practices by answering a set of questions for each pillar.",
+    "expected_parent_ids": [
+      "e3b3966c-5b1e-437b-b46d-2988065cb70f"
+    ],
+    "expected_page_numbers": [
+      153
+    ]
+  },
+  {
+    "type": "complex",
+    "question": "Besides the core AWS Well-Architected Framework and the AWS WA Tool, what specialized guidance lenses are mentioned for designing specific types of applications and workloads?",
+    "ground_truth_answer": "Specialized guidance is provided through various lenses, which include the Serverless Application Lens (focusing on serverless applications), the Container Build Lens (providing cloud-agnostic best practices for containers with AWS-specific examples), the Machine Learning Lens (for designing and deploying ML workloads), the Data Analytics Lens (describing customer-proven analytics best practices), the Hybrid Networking Lens (for designing hybrid networking), and the IoT Lens.",
+    "expected_parent_ids": [
+      "e3b3966c-5b1e-437b-b46d-2988065cb70f"
+    ],
+    "expected_page_numbers": [
+      153
+    ]
+  },
+  {
+    "type": "factoid",
+    "question": "What are Amazon EC2 instance types named based on?",
+    "ground_truth_answer": "Amazon EC2 instance types are named based on their family, generation, processor family, additional capabilities, and size.",
+    "expected_parent_ids": [
+      "fc5e283f-918f-48ba-a48b-724a4969b73f"
+    ],
+    "expected_page_numbers": [
+      45
+    ]
+  },
+  {
+    "type": "complex",
+    "question": "How do On-Demand Instances change the payment structure and commitment requirements for running compute capacity?",
+    "ground_truth_answer": "With On-Demand Instances, you pay for compute capacity by the hour or the second depending on which instances you run, with no longer-term commitments or upfront payments needed.",
+    "expected_parent_ids": [
+      "fc5e283f-918f-48ba-a48b-724a4969b73f"
+    ],
+    "expected_page_numbers": [
+      45
+    ]
+  },
+  {
+    "type": "factoid",
+    "question": "How is pricing structured for compute time consumed by AWS Lambda?",
+    "ground_truth_answer": "You pay only for the compute time you consume, with no charge when your code is not running.",
+    "expected_parent_ids": [
+      "6ec66a2d-f6ae-4b1a-bcd3-f61a7871f579"
+    ],
+    "expected_page_numbers": [
+      49
+    ]
+  },
+  {
+    "type": "complex",
+    "question": "What operational responsibilities are handled automatically after you upload your code to AWS Lambda?",
+    "ground_truth_answer": "Once you upload your code, AWS Lambda takes care of everything required to run and scale your code with high availability, providing zero administration and eliminating the need to provision or manage servers.",
+    "expected_parent_ids": [
+      "6ec66a2d-f6ae-4b1a-bcd3-f61a7871f579"
+    ],
+    "expected_page_numbers": [
+      49
+    ]
+  },
+  {
+    "type": "factoid",
+    "question": "What is Amazon Elastic Container Service (Amazon ECS)?",
+    "ground_truth_answer": "Amazon Elastic Container Service (Amazon ECS) is a highly scalable, high-performance container orchestration service that supports Docker containers and allows you to easily run and scale containerized applications on AWS.",
+    "expected_parent_ids": [
+      "09214a2a-0ef8-490a-a7ff-0a98df50d1af"
+    ],
+    "expected_page_numbers": [
+      54
+    ]
+  },
+  {
+    "type": "complex",
+    "question": "What operational burdens does Amazon ECS eliminate for users, and what actions can be performed using simple API calls once applications are running?",
+    "ground_truth_answer": "Amazon ECS eliminates the need to install and operate your own container orchestration software, manage and scale a cluster of virtual machines (VMs), or schedule containers on those VMs. With simple API calls, you can launch and stop Docker-enabled applications, query the complete state of your application, and access familiar features such as IAM roles, security groups, load balancers, Amazon CloudWatch Events, CloudFormation templates, and AWS CloudTrail logs.",
+    "expected_parent_ids": [
+      "09214a2a-0ef8-490a-a7ff-0a98df50d1af"
+    ],
+    "expected_page_numbers": [
+      54
+    ]
+  },
+  {
+    "type": "factoid",
+    "question": "What is the core purpose of Amazon Elastic Kubernetes Service (Amazon EKS)?",
+    "ground_truth_answer": "Amazon EKS makes it easy to deploy, manage, and scale containerized applications using Kubernetes on AWS.",
+    "expected_parent_ids": [
+      "03202eea-2e0f-484c-9487-89e3c0e02d82"
+    ],
+    "expected_page_numbers": [
+      54
+    ]
+  },
+  {
+    "type": "complex",
+    "question": "How does Amazon EKS prevent a single point of failure within its Kubernetes management infrastructure, and what ensures compatibility with existing partner tools?",
+    "ground_truth_answer": "Amazon EKS prevents a single point of failure by running the Kubernetes management infrastructure across multiple AWS Availability Zones. It ensures compatibility with existing tooling and plugins from partners and the Kubernetes community because it is certified Kubernetes conformant.",
+    "expected_parent_ids": [
+      "03202eea-2e0f-484c-9487-89e3c0e02d82"
+    ],
+    "expected_page_numbers": [
+      54
+    ]
+  },
+  {
+    "type": "factoid",
+    "question": "What is the designed data durability percentage for Amazon S3?",
+    "ground_truth_answer": "Amazon S3 is designed for 99.999999999% (11 9s) of durability.",
+    "expected_parent_ids": [
+      "f8628d2f-4124-4d9a-b958-718aa3ba83b1"
+    ],
+    "expected_page_numbers": [
+      150
+    ]
+  },
+  {
+    "type": "complex",
+    "question": "How are Amazon S3 storage classes designed to accommodate different workload requirements?",
+    "ground_truth_answer": "Amazon S3 storage classes are purpose-built to provide the lowest cost storage for different access patterns, allowing users to choose based on data access, resiliency, and cost requirements. They are ideal for virtually any use case, including those with demanding performance needs, data residency requirements, unknown or changing access patterns, or archival storage.",
+    "expected_parent_ids": [
+      "f8628d2f-4124-4d9a-b958-718aa3ba83b1"
+    ],
+    "expected_page_numbers": [
+      150
+    ]
+  },
+  {
+    "type": "factoid",
+    "question": "What type of storage does Amazon Elastic Block Store (Amazon EBS) provide for Amazon EC2 instances?",
+    "ground_truth_answer": "Amazon Elastic Block Store (Amazon EBS) provides persistent block storage volumes for use with Amazon EC2 instances in the AWS Cloud.",
+    "expected_parent_ids": [
+      "e6bfd7f5-ce72-4864-9fcf-f1f785cfeca2"
+    ],
+    "expected_page_numbers": [
+      146
+    ]
+  },
+  {
+    "type": "complex",
+    "question": "How does Amazon EBS protect workloads from component failure while maintaining performance and scalability?",
+    "ground_truth_answer": "Amazon EBS protects workloads from component failure by automatically replicating each volume within its Availability Zone, offering high availability and durability. Additionally, it maintains consistent and low-latency performance to run workloads, and allows users to scale their usage up or down within minutes while paying only for what they provision.",
+    "expected_parent_ids": [
+      "e6bfd7f5-ce72-4864-9fcf-f1f785cfeca2"
+    ],
+    "expected_page_numbers": [
+      146
+    ]
+  },
+  {
+    "type": "factoid",
+    "question": "What is the primary purpose of Amazon Elastic File System (Amazon EFS)?",
+    "ground_truth_answer": "Amazon Elastic File System (Amazon EFS) provides a simple, scalable, elastic file system for Linux-based workloads for use with AWS Cloud services and on-premises resources.",
+    "expected_parent_ids": [
+      "d3e7e023-992b-4b99-9850-fb7a93107503"
+    ],
+    "expected_page_numbers": [
+      147
+    ]
+  },
+  {
+    "type": "complex",
+    "question": "How does Amazon EFS achieve high availability, durability, and shared access across multiple environments and compute instances?",
+    "ground_truth_answer": "Amazon EFS is a regional service that stores data within and across multiple Availability Zones (AZs) to ensure high availability and durability. It provides massively parallel shared access to thousands of Amazon EC2 instances, allowing applications to achieve high levels of aggregate throughput and IOPS with consistent low latencies. Additionally, it enables file sharing between thousands of Amazon EC2 instances and on-premises servers by providing access through a standard file system interface, with on-premises connections supported via AWS Direct Connect or Site-to-Site VPN.",
+    "expected_parent_ids": [
+      "d3e7e023-992b-4b99-9850-fb7a93107503"
+    ],
+    "expected_page_numbers": [
+      147
+    ]
+  },
+  {
+    "type": "factoid",
+    "question": "What are the six familiar database engines available with Amazon RDS?",
+    "ground_truth_answer": "The six familiar database engines available with Amazon RDS are MySQL, MariaDB, PostgreSQL, Oracle Database, Microsoft SQL Server, and Amazon RDS on AWS Outposts.",
+    "expected_parent_ids": [
+      "4277493e-4b5c-4e6c-af5c-453c6cd1f6c0"
+    ],
+    "expected_page_numbers": [
+      62
+    ]
+  },
+  {
+    "type": "complex",
+    "question": "How does Amazon RDS reduce administrative burden, and what AWS service can be used to migrate existing databases to it?",
+    "ground_truth_answer": "Amazon RDS automates time-consuming administration tasks such as hardware provisioning, database setup, patching, and backups, which frees users to focus on their applications. To migrate or replicate existing databases to Amazon RDS, you can use the AWS Database Migration Service.",
+    "expected_parent_ids": [
+      "4277493e-4b5c-4e6c-af5c-453c6cd1f6c0"
+    ],
+    "expected_page_numbers": [
+      62
+    ]
+  },
+  {
+    "type": "factoid",
+    "question": "What is the maximum storage capacity per database instance supported by Amazon Aurora's storage system?",
+    "ground_truth_answer": "Amazon Aurora's distributed, fault-tolerant, self-healing storage system auto-scales up to 128TB per database instance.",
+    "expected_parent_ids": [
+      "84adb558-9a2d-4b7e-81d4-3ad615f01b68"
+    ],
+    "expected_page_numbers": [
+      59
+    ]
+  },
+  {
+    "type": "complex",
+    "question": "How does the Amazon Aurora I/O-Optimized cluster configuration benefit I/O-intensive applications in terms of performance and cost?",
+    "ground_truth_answer": "Amazon Aurora I/O-Optimized offers improved price performance and predictable pricing for I/O-intensive applications (such as e-commerce, payment processing, and financial systems). It increases throughput, reduces latency, and provides up to 40 percent cost savings when I/O spend exceeds 25 percent of the current cost.",
+    "expected_parent_ids": [
+      "84adb558-9a2d-4b7e-81d4-3ad615f01b68"
+    ],
+    "expected_page_numbers": [
+      59
+    ]
+  },
+  {
+    "type": "factoid",
+    "question": "What type of database is Amazon DynamoDB classified as?",
+    "ground_truth_answer": "Amazon DynamoDB is a key-value and document database.",
+    "expected_parent_ids": [
+      "590ed23e-4cd8-460d-864f-2f6ac2ed6cf1"
+    ],
+    "expected_page_numbers": [
+      59
+    ]
+  },
+  {
+    "type": "complex",
+    "question": "What extreme request volumes and performance metrics is DynamoDB capable of handling at scale?",
+    "ground_truth_answer": "DynamoDB delivers single-digit millisecond performance at any scale, can handle more than 10 trillion requests per day, and supports peaks of more than 20 million requests per second.",
+    "expected_parent_ids": [
+      "590ed23e-4cd8-460d-864f-2f6ac2ed6cf1"
+    ],
+    "expected_page_numbers": [
+      59
+    ]
+  },
+  {
+    "type": "factoid",
+    "question": "What two open-source in-memory caching engines does Amazon ElastiCache support?",
+    "ground_truth_answer": "Amazon ElastiCache supports two open-source in-memory caching engines: Redis and Memcached.",
+    "expected_parent_ids": [
+      "cce70b26-a140-437f-a402-caff7def09cf"
+    ],
+    "expected_page_numbers": [
+      60
+    ]
+  },
+  {
+    "type": "complex",
+    "question": "What are the structural and scalability limits described for Amazon ElastiCache (Redis OSS) clusters?",
+    "ground_truth_answer": "Amazon ElastiCache (Redis OSS) offers both single-node and up to 15-shard clusters, enabling scalability to handle up to 3.55 TiB of in-memory data.",
+    "expected_parent_ids": [
+      "cce70b26-a140-437f-a402-caff7def09cf"
+    ],
+    "expected_page_numbers": [
+      60
+    ]
+  },
+  {
+    "type": "factoid",
+    "question": "What IP address versions can be used in an Amazon VPC for secure and easy access to resources and applications?",
+    "ground_truth_answer": "Both IPv4 and IPv6 can be used in your VPC for secure and easy access to resources and applications.",
+    "expected_parent_ids": [
+      "135df184-a9c6-42a4-9c92-bc51bc7225f3"
+    ],
+    "expected_page_numbers": [
+      129
+    ]
+  },
+  {
+    "type": "complex",
+    "question": "How can you structure subnet configurations and security layers within an Amazon VPC to isolate backend systems from the Internet while maintaining web server accessibility?",
+    "ground_truth_answer": "You can customize the network configuration by creating a public-facing subnet for your web servers that has access to the Internet, and placing backend systems (such as databases or application servers) in a private-facing subnet with no Internet access. Additionally, you can leverage multiple layers of security, including security groups and network access control lists, to help control access to EC2 instances in each subnet.",
+    "expected_parent_ids": [
+      "135df184-a9c6-42a4-9c92-bc51bc7225f3"
+    ],
+    "expected_page_numbers": [
+      129
+    ]
+  },
+  {
+    "type": "factoid",
+    "question": "What pricing model does Amazon CloudFront use?",
+    "ground_truth_answer": "Amazon CloudFront offers a simple, pay-as-you-go pricing model with no upfront fees or required long-term contracts.",
+    "expected_parent_ids": [
+      "7c83061b-f141-438b-8857-2497b871e2ca"
+    ],
+    "expected_page_numbers": [
+      123
+    ]
+  },
+  {
+    "type": "complex",
+    "question": "How does Amazon CloudFront integrate with other AWS services to support application origins, security, and custom code execution?",
+    "ground_truth_answer": "Amazon CloudFront integrates seamlessly with several AWS services: it works with Amazon S3, Elastic Load Balancing, or Amazon EC2 to serve as origins for your applications, utilizes AWS Shield for DDoS mitigation, and uses Lambda@Edge to run custom code closer to users and customize the user experience.",
+    "expected_parent_ids": [
+      "7c83061b-f141-438b-8857-2497b871e2ca"
+    ],
+    "expected_page_numbers": [
+      123
+    ]
+  },
+  {
+    "type": "factoid",
+    "question": "What is the core purpose of Elastic Load Balancing (ELB)?",
+    "ground_truth_answer": "Elastic Load Balancing (ELB) automatically distributes incoming application traffic across multiple targets, such as Amazon EC2 instances, containers, and IP addresses, and can handle varying loads in a single Availability Zone or across multiple Availability Zones.",
+    "expected_parent_ids": [
+      "4c117025-7d3a-4f9b-8c59-3e46ae6e8539"
+    ],
+    "expected_page_numbers": [
+      125
+    ]
+  },
+  {
+    "type": "complex",
+    "question": "How do Application Load Balancer and Network Load Balancer differ in their operating levels, traffic types, and routing capabilities based on the text?",
+    "ground_truth_answer": "Application Load Balancer operates at the individual request level (Layer seven), is best suited for HTTP and HTTPS traffic, and routes traffic to targets within an Amazon VPC based on the content of the request to support modern architectures like microservices and containers. In contrast, Network Load Balancer operates at the connection level (Layer four), is best suited for TCP traffic requiring extreme performance, handles millions of requests per second with ultra-low latencies, and is optimized for sudden and volatile traffic patterns.",
+    "expected_parent_ids": [
+      "4c117025-7d3a-4f9b-8c59-3e46ae6e8539"
+    ],
+    "expected_page_numbers": [
+      125
+    ]
+  },
+  {
+    "type": "factoid",
+    "question": "What is the primary purpose of AWS Identity and Access Management (IAM)?",
+    "ground_truth_answer": "AWS Identity and Access Management (IAM) enables you to securely control access to AWS services and resources for your AWS users, groups, and roles, allowing you to create and manage fine-grained access controls with permissions.",
+    "expected_parent_ids": [
+      "8835d188-7430-4054-9314-0b885aaf707f"
+    ],
+    "expected_page_numbers": [
+      140
+    ]
+  },
+  {
+    "type": "complex",
+    "question": "How can you manage multi-account access and permissions using AWS IAM Identity Center?",
+    "ground_truth_answer": "You can centrally manage multi-account access and the permissions to all of your accounts in AWS Organizations by enabling the highly available AWS IAM Identity Center service with just a few clicks. It allows you to manage AWS permissions for workforce users and workloads across multiple AWS accounts, and includes built-in SAML integrations as well as the ability to create SAML 2.0 integrations to extend single sign-on access to SAML-enabled applications, letting users access assigned accounts and applications from one place using configured or corporate credentials.",
+    "expected_parent_ids": [
+      "8835d188-7430-4054-9314-0b885aaf707f"
+    ],
+    "expected_page_numbers": [
+      140
+    ]
+  },
+  {
+    "type": "factoid",
+    "question": "What cryptographic validation program do the hardware security modules used by AWS KMS fall under?",
+    "ground_truth_answer": "AWS KMS uses hardware security modules (HSM) to protect and validate your AWS KMS keys under the FIPS 140-2 Cryptographic Module Validation Program.",
+    "expected_parent_ids": [
+      "13cd6842-583a-45c2-8373-d61c82cd98e0"
+    ],
+    "expected_page_numbers": [
+      140
+    ]
+  },
+  {
+    "type": "complex",
+    "question": "How does AWS KMS integrate with other AWS services to assist with regulatory and compliance requirements regarding key usage?",
+    "ground_truth_answer": "AWS KMS is integrated with AWS CloudTrail to provide logs of all key usage, which helps users meet their regulatory and compliance needs.",
+    "expected_parent_ids": [
+      "13cd6842-583a-45c2-8373-d61c82cd98e0"
+    ],
+    "expected_page_numbers": [
+      140
+    ]
+  },
+  {
+    "type": "factoid",
+    "question": "What is Amazon Athena?",
+    "ground_truth_answer": "Amazon Athena is an interactive, serverless query service that makes it easy to analyze data in Amazon S3 using standard SQL without the need to manage infrastructure or run complex ETL jobs.",
+    "expected_parent_ids": [
+      "813278be-00e7-4dc2-a0f1-00b7391b00de"
+    ],
+    "expected_page_numbers": [
+      21
+    ]
+  },
+  {
+    "type": "complex",
+    "question": "How does Amazon Athena integrate with the AWS Glue Data Catalog, and what capabilities does this integration provide?",
+    "ground_truth_answer": "Amazon Athena is out-of-the-box integrated with the AWS Glue Data Catalog, which allows you to create a unified metadata repository across various services, crawl data sources to discover schemas, populate your catalog with new and modified table and partition definitions, and maintain schema versioning.",
+    "expected_parent_ids": [
+      "813278be-00e7-4dc2-a0f1-00b7391b00de"
+    ],
+    "expected_page_numbers": [
+      21
+    ]
+  },
+  {
+    "type": "factoid",
+    "question": "What is AWS Glue?",
+    "ground_truth_answer": "AWS Glue is a fully managed extract, transform, and load (ETL) service that makes it easy for customers to prepare and load their data for analytics.",
+    "expected_parent_ids": [
+      "ce148d2d-e036-4d41-b2bb-790b7dfecaef"
+    ],
+    "expected_page_numbers": [
+      28
+    ]
+  },
+  {
+    "type": "complex",
+    "question": "How do AWS Glue Data Integration Engines and AWS Glue for Ray enable users to access and scale their workloads?",
+    "ground_truth_answer": "AWS Glue Data Integration Engines provide access to data using Apache Spark, PySpark, and Python. Additionally, with AWS Glue for Ray, users can further scale their workloads using Ray, which is an open-source unified compute framework.",
+    "expected_parent_ids": [
+      "ce148d2d-e036-4d41-b2bb-790b7dfecaef"
+    ],
+    "expected_page_numbers": [
+      28
+    ]
+  },
+  {
+    "type": "out_of_scope",
+    "question": "How do I configure virtual network peering on Microsoft Azure Virtual Machines?",
+    "ground_truth_answer": "I cannot answer this based on the provided document.",
+    "expected_parent_ids": [],
+    "expected_page_numbers": []
+  },
+  {
+    "type": "out_of_scope",
+    "question": "What is the capital city of France?",
+    "ground_truth_answer": "I cannot answer this based on the provided document.",
+    "expected_parent_ids": [],
+    "expected_page_numbers": []
+  }
+]
